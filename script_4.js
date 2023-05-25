@@ -19,6 +19,8 @@ const entrepreneurs = [
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
 
+// 1.1
+
 console.log("********** Les entrepreneurs qui sont nés dans les années 70 :")
 let num = 0;
 for(let index in entrepreneurs) {
@@ -27,3 +29,20 @@ for(let index in entrepreneurs) {
   }
 }
 console.log(num + " entrepreneurs sont nés dans les années 70.")
+
+// 1.2
+
+console.log("********** les prénoms et le noms des entrepreneurs :")
+const names = entrepreneurs.map(index => `${index.first} ${index.last}`);
+
+console.log(names);
+
+// 1.3
+
+console.log("********** l'age des entrepreneurs en 2023 :")
+const age = entrepreneurs.map(index => `${index.age = 2023 - index.year} ans`);
+
+console.log(age);
+
+// 1.4
+
