@@ -21,28 +21,42 @@ const entrepreneurs = [
 
 // 1.1
 
-console.log("********** Les entrepreneurs qui sont nés dans les années 70 :")
+console.log("********** Les entrepreneurs qui sont nés dans les années 70 :");
 let num = 0;
 for(let index in entrepreneurs) {
   if(entrepreneurs[index].year >= 1970 && entrepreneurs[index].year < 1980) {
-    num++
+    num++;
   }
 }
-console.log(num + " entrepreneurs sont nés dans les années 70.")
+console.log(num + " entrepreneurs sont nés dans les années 70.");
 
 // 1.2
 
-console.log("********** les prénoms et le noms des entrepreneurs :")
+console.log("********** les prénoms et le noms des entrepreneurs :");
 const names = entrepreneurs.map(index => `${index.first} ${index.last}`);
 
 console.log(names);
 
 // 1.3
 
-console.log("********** l'age des entrepreneurs en 2023 :")
+console.log("********** l'age des entrepreneurs en 2023 :");
 const age = entrepreneurs.map(index => `${index.age = 2023 - index.year} ans`);
 
 console.log(age);
 
 // 1.4
 
+entrepreneurs.sort(function(a, b) {
+  var lastNameA = a.last.toUpperCase();
+  var lastNameB = b.last.toUpperCase();
+
+  if (lastNameA < lastNameB) {
+    return -1;
+  }
+  if (lastNameA > lastNameB) {
+    return 1;
+  }
+  return 0;
+});
+
+console.log(entrepreneurs);
